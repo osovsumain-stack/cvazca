@@ -1,0 +1,5 @@
+# Replace the domain with your production domain. Caddy manages HTTPS certificates.
+svyazka.example.org {
+    encode zstd gzip
+    reverse_proxy 127.0.0.1:3001
+}

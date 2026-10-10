@@ -1,0 +1,27 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        VITE_VK_APP_ID: ${VITE_VK_APP_ID:-}
+        VITE_VK_REDIRECT_URL: ${VITE_VK_REDIRECT_URL:-}
+        VITE_LEGAL_EMAIL: ${VITE_LEGAL_EMAIL:-}
+        VITE_LEGAL_ADDRESS: ${VITE_LEGAL_ADDRESS:-}
+        VITE_PRODUCTION_DOMAIN: ${VITE_PRODUCTION_DOMAIN:-}
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3001
+      DB_PATH: /data/platform.sqlite
+    ports:
+      - "127.0.0.1:3001:3001"
+    volumes:
+      - platform-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+volumes:
+  platform-data:
