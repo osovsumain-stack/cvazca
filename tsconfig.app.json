@@ -17,7 +17,7 @@
 
     /* Path alias */
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"]
     },
 
     /* Linting */
@@ -25,5 +25,5 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["*.tsx", "*.ts", "components/**/*", "config/**/*", "data/**/*", "features/**/*", "layouts/**/*", "pages/**/*", "repositories/**/*", "services/**/*", "types/**/*", "assets/**/*"]
 }

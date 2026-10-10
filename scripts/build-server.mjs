@@ -7,7 +7,7 @@ const seen = new Set();
 async function compile(relative) {
   if (seen.has(relative)) return;
   seen.add(relative);
-  const source = await readFile(path.join(root, 'src', relative), 'utf8');
+  const source = await readFile(path.join(root, relative), 'utf8');
   let output = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText;
   output = output.replaceAll('import.meta.env', '({ SSR: true, DEV: false })');
   const dependencies = [];
