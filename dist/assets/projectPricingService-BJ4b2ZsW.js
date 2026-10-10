@@ -1,0 +1,1 @@
+function e(e){let t=typeof e==`number`?e:parseFloat(String(e).replace(`,`,`.`).replace(/\s/g,``));return!Number.isFinite(t)||t<0?0:Math.round(t*100)}function t(e){return Math.round(e)/100}function n(e){return t(e).toLocaleString(`ru-RU`)}export{t as n,e as r,n as t};

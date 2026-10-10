@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-CIHwb6Jn.js";import{t}from"./PartnershipPage-Bsewk2mf.js";var n=e();function r(){return(0,n.jsx)(t,{business:!0})}export{r as BusinessPartnershipPage};
