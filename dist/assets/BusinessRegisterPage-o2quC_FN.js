@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-CIHwb6Jn.js";import{Mt as t}from"./index-COopGqse.js";var n=e();function r(){return(0,n.jsx)(t,{to:`/auth`,state:{from:`/business/organizations/new`,mode:`register`},replace:!0})}export{r as BusinessRegisterPage};
