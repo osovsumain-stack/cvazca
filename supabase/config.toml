@@ -1,0 +1,5 @@
+[functions.lookup-organization]
+verify_jwt = false
+
+[functions.lookup-bank]
+verify_jwt = false
